@@ -1,0 +1,19 @@
+{
+  "name": "AuthenticationPhp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "compile:scss": "node-sass scss/main.scss Storage/System/app.build.css -w"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "vue": "^2.6.11"
+  },
+  "devDependencies": {
+    "node-sass": "^4.14.1"
+  }
+}

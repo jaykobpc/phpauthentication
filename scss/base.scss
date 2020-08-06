@@ -1,0 +1,40 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    -webkit-scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Open Sans", Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    background-color: $color-white;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-font-smoothing: antialiased;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+.no-select {
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+[v-cloak] {
+    display: none;
+}

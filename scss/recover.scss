@@ -1,0 +1,27 @@
+.rmcontainer {
+    position: relative;
+    background-color: inherit;
+
+    &__title {
+        font-family: inherit;
+        font-size: 2rem;
+        font-weight: 600;
+        color: $color-dark-300;
+        margin-bottom: 1rem;
+        color: $color-grey-600;
+    }
+
+    &__form {
+        margin: 15rem auto 0px auto;
+        width: 45rem;
+        border: 1px solid $color-grey-300;
+        padding: 1.5rem 1rem;
+        border-radius: 0.6rem;
+
+        @media only screen and (max-width: 56.25em) {  //900px;
+            width: 95%;
+            border: none;
+        }
+    }
+}
+

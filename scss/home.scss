@@ -1,0 +1,283 @@
+.wxhomeview {
+    background-color: $color-white;
+}
+
+.wxcontainer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: inherit;
+    width: 50rem;
+    overflow: hidden;
+    border-radius: 0.4rem;
+    box-shadow: 0px 3px 6px rgba($color-grey-600, 0.3);
+
+    @media only screen and (max-width: 56.25em) {  //900px;
+        width: 98%;
+        border: none;
+        box-shadow: unset;
+        top: 45%;
+    }
+
+    &__imgbox {
+        padding: 0;
+        margin: 0;
+        position: relative;
+     
+        &--image {
+            object-fit: cover;
+            max-height: 28rem;
+        }
+
+        &--iconview {
+            position: absolute;
+            width: 4rem;
+            height: 4rem;
+            border-radius: 50%;
+            text-align: center;
+            right: 1.5rem;
+            bottom: -1.5rem;
+            background-color: $color-white;
+            fill: $color-grey-600;
+            padding: 0.8rem 0.5rem;
+            box-shadow: 0px 2px 4px rgba(0,0,0,0.4);
+            cursor: pointer;
+            transition: fill 0.3s;
+
+            &:hover {
+                fill: $color-blue-500;
+            }
+        }
+    }
+
+    &__ftview {
+        margin-top: 1.5rem;
+        margin-bottom: 0.8rem;
+        padding-left: 0.5rem;
+
+        &--linktext {
+            text-decoration: none;
+            font-family: inherit;
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: $color-blue-500;
+            text-transform: uppercase;
+            padding: 0.5rem 0.6rem;
+            letter-spacing: 0.0225rem;
+            transition: background-color 0.3s;
+
+            &:hover {
+                background-color: $color-blue-100;
+            }
+        }
+    }
+
+    &__textview {
+        padding: 0.3rem 1rem;
+        margin-bottom: 0.5rem;
+
+        &--tab {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding: 0.9rem 0rem;
+
+            &:not(:last-child) {
+                border-bottom: 1px solid $color-grey-300;
+            }
+        }
+
+        &--lgtext {
+            margin-right: auto;
+            font-family: inherit;
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: $color-grey-600;
+        }
+
+        &--smtext {
+            font-family: inherit;
+            font-size: 1.3rem;
+            font-weight: 400;
+            color: $color-grey-600;
+        }
+    }
+
+    &__footerview {
+        padding-top: 1rem;
+
+        &--btn {
+            width: 100%;
+            border: none;
+            outline: none;
+            padding: 1.5rem;
+            font-family: inherit;
+            font-size: 1.3rem;
+            color: $color-white;
+            font-weight: 600;
+            cursor: pointer;
+            background-color: $color-red-400;
+            text-decoration: none;
+            display: block;
+            text-transform: uppercase;
+            letter-spacing: 0.0955rem;
+        }
+    }
+}
+
+.wxuploadmodal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(
+        rgba($color-dark, 0.4),
+        rgba($color-dark, 0.4)
+    );
+
+    &__container {
+        background-color: $color-white;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 73rem;
+        overflow: hidden;
+        border-radius: 0.4rem;
+
+        @media only screen and (max-width: 56.25em) {  //900px;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    }
+
+    &__widget {
+        margin-bottom: 1rem;
+        max-height: 60rem;
+        height: 46.5rem;
+
+        @media only screen and (max-width: 56.25em) {  //900px;
+            width: 100%;
+            height: 80%;
+        }
+    }
+
+    &__navbar {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        text-align: center;
+        border: 1px solid $color-grey-200;
+        padding: 0.4rem 0.5rem;
+
+        &--iconview {
+            text-align: center;
+            background-color: $color-white;
+            width: 4rem;
+            height: 4rem;
+            border-radius: 50%;
+            padding: 0.7rem 0.5rem;
+            fill: $color-grey-600;
+            transition: all 0.3s;
+            cursor: pointer;
+
+            &:hover {
+                background-color: $color-grey-200;
+            }
+        }
+
+        &--textview {
+            font-family: inherit;
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: $color-red-400;
+            flex: 1;
+            margin-left: -2.1rem;
+        }
+    }
+
+    &__defaultview {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        border: 3px dotted $color-grey-500;
+        padding: 3rem 1.5rem;
+        border-radius: 0.5rem;
+        cursor: pointer;
+
+        &--icon {
+            fill: $color-grey-600;
+            margin-bottom: 0.8rem;
+        }
+
+        &--text {
+            font-family: inherit;
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: $color-grey-600;
+        }
+    }
+
+    &__imageview {
+        max-height: 47rem;
+        padding: 1rem;
+        overflow-x: hidden;
+        overflow-y: auto;
+
+        @media only screen and (max-width: 56.25em) {  //900px;
+            max-height: unset;
+        }
+
+        &--img {
+            object-fit: cover;
+            margin: 0 auto;
+        }
+    }
+
+    &__ftview {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        padding: 0.8rem 0.2rem;
+
+        @media only screen and (max-width: 56.25em) {  //900px;
+            justify-content: center;
+        }
+
+        &--btn {
+            border: none;
+            outline: none;
+            padding: 0.8rem 2rem;
+            margin: 0rem 0.5rem;
+            border-radius: 0.4rem;
+            cursor: pointer;
+            font-weight: 600;
+            font-family: inherit;
+            font-size: 1.3rem;
+        }
+    }
+}
+
+.display-none {
+    display: none;
+}
+
+.display-block {
+    display: block;
+}
+
+.red-fill {
+    background-color: $color-red-400;
+    color: $color-white;
+}
+
+.blue-fill {
+    background-color: $color-blue-500;
+    color: $color-white;
+}
